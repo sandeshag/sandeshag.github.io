@@ -93,42 +93,50 @@ Colours and fonts are CSS variables at the top of `src/index.css` (earthy dark b
 This is a build-based site, so GitHub Pages cannot serve the repo's files directly. It has to publish the built `dist/` folder.
 
 1. In the repository, go to **Settings > Pages** and set **Source** to **GitHub Actions**.
-2. Add `.github/workflows/deploy.yml`:
+2. Add the file `.github/workflows/deploy.yml` (it is included in this repo) with exactly this content. YAML is sensitive to indentation, so copy it as-is:
 
-   ```yaml
-   name: Deploy to GitHub Pages
-   on:
-     push:
-       branches: [main]
-     workflow_dispatch:
-   permissions:
-     contents: read
-     pages: write
-     id-token: write
-   jobs:
-     build:
-       runs-on: ubuntu-latest
-       steps:
-         - uses: actions/checkout@v4
-         - uses: actions/setup-node@v4
-           with:
-             node-version: 22
-             cache: npm
-         - run: npm ci
-         - run: npm run build
-         - uses: actions/upload-pages-artifact@v3
-           with:
-             path: dist
-     deploy:
-       needs: build
-       runs-on: ubuntu-latest
-       environment:
-         name: github-pages
-         url: ${{ steps.deployment.outputs.page_url }}
-       steps:
-         - id: deployment
-           uses: actions/deploy-pages@v4
-   ```
+```yaml
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
+```
 
 3. Every push to `main` now rebuilds and publishes the site.
 
