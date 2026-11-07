@@ -1,0 +1,321 @@
+.training {
+  background: var(--bg-dark);
+  padding-block: clamp(64px, 9vw, 128px);
+  overflow-x: clip;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: clamp(24px, 6vw, 96px);
+  align-items: end;
+  margin-bottom: clamp(8px, 2vw, 24px);
+}
+
+.header h2 {
+  margin-top: 20px;
+  font-size: clamp(40px, 5.4vw, 72px);
+}
+
+.side {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.intro {
+  max-width: 44ch;
+  color: rgba(238, 236, 225, 0.72);
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+}
+
+.arrowBtn {
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  background: none;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--text-on-dark);
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.arrowBtn:hover:not(:disabled) {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--on-primary);
+}
+
+.arrowBtn:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.track {
+  --overlap: 44px;
+  --tilt: 1;
+
+  display: flex;
+  align-items: stretch;
+  list-style: none;
+  margin: 0 calc(var(--gutter) * -1);
+  padding: 64px var(--gutter) 72px;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  scroll-padding-inline: var(--gutter);
+  scrollbar-width: none;
+}
+
+.track::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  --r: 0;
+  --y: 0px;
+
+  position: relative;
+  flex: 0 0 var(--w, 320px);
+  width: var(--w, 320px);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 22px;
+  background: var(--card-bg);
+  color: var(--card-fg);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+  scroll-snap-align: start;
+  transform-origin: 50% 85%;
+  transform: translateY(var(--y)) rotate(calc(var(--r) * var(--tilt) * 1deg));
+  transition: transform 0.45s cubic-bezier(0.2, 0.7, 0.2, 1),
+    box-shadow 0.45s ease;
+}
+
+.card + .card {
+  margin-left: calc(var(--overlap) * -1);
+}
+
+.card:nth-child(5n + 1) { --r: -4; --y: 14px; }
+.card:nth-child(5n + 2) { --r: 2.5; --y: -10px; }
+.card:nth-child(5n + 3) { --r: -2; --y: 6px; }
+.card:nth-child(5n + 4) { --r: 3; --y: -14px; }
+.card:nth-child(5n + 5) { --r: -3; --y: 8px; }
+
+.card:hover,
+.card:focus-within {
+  z-index: 10;
+  transform: translateY(-18px) rotate(0deg) scale(1.03);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+}
+
+.v0 {
+  --card-bg: var(--primary-deep);
+  --card-fg: #eeece1;
+  --card-sub: rgba(238, 236, 225, 0.8);
+  --card-rule: rgba(238, 236, 225, 0.18);
+  --media-a: #567257;
+  --media-b: #2f4632;
+  --media-lines: rgba(238, 236, 225, 0.14);
+  --media-ink: rgba(238, 236, 225, 0.88);
+  --tag-bg: var(--primary-tint);
+  --tag-fg: var(--bg-dark);
+}
+
+.v1 {
+  --card-bg: var(--primary-tint);
+  --card-fg: var(--bg-dark);
+  --card-sub: rgba(42, 36, 32, 0.78);
+  --card-rule: rgba(42, 36, 32, 0.2);
+  --media-a: #b3ccb5;
+  --media-b: #7a9e7d;
+  --media-lines: rgba(42, 36, 32, 0.12);
+  --media-ink: rgba(42, 36, 32, 0.85);
+  --tag-bg: var(--bg-dark);
+  --tag-fg: var(--primary-tint);
+}
+
+.v2 {
+  --card-bg: #6b5142;
+  --card-fg: #eeece1;
+  --card-sub: rgba(238, 236, 225, 0.82);
+  --card-rule: rgba(238, 236, 225, 0.2);
+  --media-a: #896a58;
+  --media-b: #553f33;
+  --media-lines: rgba(238, 236, 225, 0.14);
+  --media-ink: rgba(238, 236, 225, 0.88);
+  --tag-bg: var(--bg-cream);
+  --tag-fg: var(--bg-dark);
+}
+
+.v3 {
+  --card-bg: var(--primary);
+  --card-fg: var(--on-primary);
+  --card-sub: rgba(243, 242, 239, 0.86);
+  --card-rule: rgba(243, 242, 239, 0.22);
+  --media-a: #6f8f71;
+  --media-b: #3f5a41;
+  --media-lines: rgba(243, 242, 239, 0.15);
+  --media-ink: rgba(243, 242, 239, 0.9);
+  --tag-bg: var(--primary-tint);
+  --tag-fg: var(--bg-dark);
+}
+
+.v4 {
+  --card-bg: var(--bg-cream);
+  --card-fg: var(--bg-dark);
+  --card-sub: rgba(42, 36, 32, 0.74);
+  --card-rule: rgba(42, 36, 32, 0.16);
+  --media-a: #c9c8bd;
+  --media-b: #acab9e;
+  --media-lines: rgba(42, 36, 32, 0.1);
+  --media-ink: rgba(42, 36, 32, 0.82);
+  --tag-bg: var(--primary);
+  --tag-fg: var(--on-primary);
+}
+
+.media {
+  position: relative;
+  height: 176px;
+  flex-shrink: 0;
+  overflow: hidden;
+  background:
+    repeating-radial-gradient(
+      circle at 88% 12%,
+      transparent 0 13px,
+      var(--media-lines) 13px 14px
+    ),
+    repeating-radial-gradient(
+      circle at 8% 118%,
+      transparent 0 17px,
+      var(--media-lines) 17px 18px
+    ),
+    linear-gradient(155deg, var(--media-a), var(--media-b));
+}
+
+.media img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.year {
+  position: absolute;
+  left: 22px;
+  bottom: 10px;
+  font-family: var(--font-serif);
+  font-size: 76px;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  color: var(--media-ink);
+}
+
+.tag {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  padding: 7px 14px;
+  border-radius: 999px;
+  background: var(--tag-bg);
+  color: var(--tag-fg);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  line-height: 1.2;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+}
+
+.body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 22px calc(24px + var(--overlap)) 22px 24px;
+}
+
+.meta {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--card-sub);
+}
+
+.card h3 {
+  font-size: 24px;
+  line-height: 1.12;
+  letter-spacing: -0.005em;
+}
+
+.organizer {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--card-sub);
+}
+
+.note {
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--card-sub);
+}
+
+.when {
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid var(--card-rule);
+  font-size: 12px;
+  line-height: 1.45;
+  letter-spacing: 0.03em;
+  color: var(--card-sub);
+}
+
+@media (max-width: 860px) {
+  .header {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+}
+
+@media (max-width: 600px) {
+  .track {
+    --overlap: 26px;
+    --tilt: 0.55;
+  }
+
+  .card {
+    --w: min(80vw, 300px);
+  }
+
+  .media {
+    height: 150px;
+  }
+
+  .year {
+    font-size: 64px;
+  }
+
+  .card h3 {
+    font-size: 22px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    transition: none;
+  }
+
+  .card:hover,
+  .card:focus-within {
+    transform: translateY(var(--y)) rotate(calc(var(--r) * var(--tilt) * 1deg));
+  }
+}

@@ -1,0 +1,50 @@
+export const publications = {
+  eyebrow: 'Publications and writing',
+  heading: 'Ideas on paper.',
+  intro: 'A book, a journal article and opinion pieces on vermicomposting, soil carbon and farming in Nepal.',
+  items: [
+    {
+      year: '2026',
+      title: 'The Challenge for the New Government to Increase Carbon in Soil',
+      authors: 'Sandesh Subedi & Roshan Babu Ojha',
+      kind: 'Opinion piece',
+      language: 'Nepali',
+      link: 'https://shorturl.at/9UO99',
+    },
+    {
+      year: '2025',
+      title: 'Adding Deep Boring will not Quench the Thirst of Drought-Stricken Madhesh',
+      kind: 'Opinion piece',
+      language: 'Nepali',
+      link: 'https://www.onlinekhabar.com/2025/07/1731004/adding-deep-boring-will-not-quench-the-thirst-of-drought-stricken-madhesh',
+    },
+    {
+      year: '2025',
+      title: 'Plants May Lack Nutrients in Winter',
+      kind: 'Opinion piece',
+      language: 'Nepali',
+      link: 'https://shorturl.at/SleVQ',
+    },
+    {
+      year: '2021',
+      title: 'Vermicompost: An Introduction and Production Technology',
+      authors: 'Sandesh Subedi & Hirakaji Manandhar',
+      kind: 'Book',
+      language: 'Nepali',
+    },
+    {
+      year: '2019',
+      title: 'Immense Potential in Agriculture',
+      outlet: 'Gorakhapatra Daily',
+      kind: 'Article',
+      language: 'Nepali',
+      date: 'June 1, 2019',
+    },
+    {
+      year: '2019',
+      title: 'Utilization of Agricultural Wastes as Substrates for Vermicomposting',
+      outlet: 'IOSR Journal of Agriculture and Veterinary Science',
+      kind: 'Journal article',
+    },
+  ],
+}

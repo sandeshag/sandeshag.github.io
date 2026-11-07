@@ -1,0 +1,98 @@
+.education {
+  background: var(--bg-dark);
+  padding-block: clamp(64px, 9vw, 128px);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  gap: clamp(32px, 6vw, 96px);
+  align-items: start;
+}
+
+.intro {
+  position: sticky;
+  top: calc(var(--nav-h) + 24px);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.intro h2 {
+  font-size: clamp(40px, 5.4vw, 72px);
+}
+
+.lead {
+  max-width: 34ch;
+  color: rgba(238, 236, 225, 0.72);
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--line);
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 140px minmax(0, 1fr);
+  gap: 24px;
+  padding-block: clamp(24px, 3vw, 36px);
+  border-bottom: 1px solid var(--line);
+}
+
+.dates {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--primary-tint);
+  padding-top: 8px;
+}
+
+.item h3 {
+  font-size: clamp(24px, 2.6vw, 34px);
+  margin-bottom: 10px;
+}
+
+.institution {
+  color: rgba(238, 236, 225, 0.8);
+  font-size: 15px;
+}
+
+.thesis {
+  margin-top: 14px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.thesis span {
+  display: block;
+  margin-bottom: 2px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(238, 236, 225, 0.5);
+}
+
+@media (max-width: 860px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .intro {
+    position: static;
+  }
+
+  .item {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .dates {
+    padding-top: 0;
+  }
+}
