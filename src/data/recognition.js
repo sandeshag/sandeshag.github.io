@@ -17,7 +17,7 @@ export const recognition = {
       title: 'Featured as "Young Achiever"',
       source: 'Nepal Television',
       note: 'January 5, 2020',
-      link: { label: 'Watch', href: 'https://shorturl.at/f523u' },
+      link: { label: 'Watch', href: 'https://youtube.com/watch?feature=shared&v=bzy_aSlMV8U' },
     },
   ],
 }

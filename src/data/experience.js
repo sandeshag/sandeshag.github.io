@@ -13,7 +13,7 @@ export const experience = {
           role: 'Soil Scientist and Office Chief',
           org: 'Soil and Fertilizer Testing Laboratory, Rajbiraj, Saptari',
           note: 'Ministry of Land Management, Agriculture and Cooperative, Madhesh Province, Nepal',
-          link: { label: 'View details', href: 'https://shorturl.at/yk6ez' },
+          link: { label: 'View details', href: 'https://soillab.madhesh.gov.np/' },
         },
         {
           dates: 'Jan 2023 – Present',
@@ -61,14 +61,14 @@ export const experience = {
           role: 'Founding Secretary',
           org: 'Dream100 (NGO)',
           note: 'A volunteer-based organization helping low-income students pursue their college dreams.',
-          link: { label: 'Visit Dream100', href: 'https://shorturl.at/0ILCS' },
+          link: { label: 'Visit Dream100', href: 'https://dream100.org/' },
         },
         {
           dates: '2017 – 2021',
           role: 'Co-founder and Entrepreneur',
           org: 'Team Vermiponics',
           note: 'An organic startup promoting sustainable agriculture through multi-stakeholder engagement.',
-          link: { label: 'Visit Vermiponics', href: 'https://shorturl.at/JyOyw' },
+          link: { label: 'Visit Vermiponics', href: 'https://www.facebook.com/share/1Ginj3B1w5/' },
         },
         {
           dates: '2015 – 2017',

@@ -9,7 +9,7 @@ export const publications = {
       authors: 'Sandesh Subedi & Roshan Babu Ojha',
       kind: 'Opinion piece',
       language: 'Nepali',
-      link: 'https://shorturl.at/9UO99',
+      link: 'https://www.onlinekhabar.com/2026/04/1911081/the-challenge-for-the-new-government-to-increase-carbon-in-soil',
     },
     {
       year: '2025',
@@ -23,7 +23,7 @@ export const publications = {
       title: 'Plants May Lack Nutrients in Winter',
       kind: 'Opinion piece',
       language: 'Nepali',
-      link: 'https://shorturl.at/SleVQ',
+      link: 'https://www.ujyaaloonline.com/detail/122098',
     },
     {
       year: '2021',
