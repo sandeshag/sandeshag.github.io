@@ -29,6 +29,11 @@ function roundedPath(points: [number, number][], t: number) {
 }
 
 const HEX_PATH = roundedPath(HEX, 0.3)
+const TYPE_LABELS: Record<string, string> = {
+  podcast: 'Podcast',
+  article: 'Article',
+  radio: 'Radio show',
+}
 
 export default function Views() {
   const items = views.items
@@ -169,7 +174,7 @@ export default function Views() {
                 </svg>
 
                 <div className={styles.inner}>
-                  <p className={styles.type}>{item.type === 'podcast' ? 'Podcast' : 'Article'}</p>
+                  <p className={styles.type}>{TYPE_LABELS[item.type] ?? 'Article'}</p>
                   <h3>{item.title}</h3>
                   <p className={styles.view}>{item.view}</p>
 

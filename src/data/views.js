@@ -20,7 +20,7 @@ export const views = {
       link: { label: 'Watch', href: 'https://www.youtube.com/watch?v=wH22vRmv6_g' },
     },
     {
-      type: 'radio show',
+      type: 'radio',
       title: 'Sharing thoughts on soil health',
       source: 'Radio Nepal',
       date: 'Mar 2026',

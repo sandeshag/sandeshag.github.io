@@ -1,7 +1,7 @@
 import type { NavLink } from './site.js'
 
 export interface ViewItem {
-  type: 'article' | 'podcast'
+  type: 'article' | 'podcast' | 'radio'
   title: string
   source: string
   date: string
