@@ -31,6 +31,7 @@ export const publications = {
       authors: 'Sandesh Subedi & Hirakaji Manandhar',
       kind: 'Book',
       language: 'Nepali',
+      link: 'https://www.facebook.com/story.php?story_fbid=4210623572366042&id=100002553224043#',
     },
     {
       year: '2019',
@@ -39,6 +40,7 @@ export const publications = {
       kind: 'Article',
       language: 'Nepali',
       date: 'June 1, 2019',
+      link: 'https://www.facebook.com/story.php?story_fbid=2226991827395903&id=100002553224043#',
     },
     {
       year: '2019',
