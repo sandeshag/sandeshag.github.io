@@ -7,6 +7,7 @@ import Experience from './components/Experience.tsx'
 import Training from './components/Training.tsx'
 import Research from './components/Research.tsx'
 import Publications from './components/Publications.tsx'
+import Views from './components/Views.tsx'
 import Recognition from './components/Recognition.tsx'
 import Contact from './components/Contact.tsx'
 import Footer from './components/Footer.tsx'
@@ -30,6 +31,7 @@ export default function App() {
         <Training />
         <Research />
         <Publications />
+        <Views />
         <Recognition />
         <Contact />
       </main>
