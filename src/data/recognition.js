@@ -3,6 +3,7 @@ export const recognition = {
   heading: 'Moments that mattered.',
   items: [
     {
+      year: '2019',
       title: 'National Essay Competition Winner',
       source: 'Conference of Okayama International NGO Network (COINN), Japan',
       note: '"How to make youth continue living their hometown."',

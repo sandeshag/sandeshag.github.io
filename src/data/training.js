@@ -6,13 +6,23 @@ export const training = {
   items: [
     {
       year: '2025',
+      tag: 'Labroatory skills',
+      month: 'May 2025',
+      duration: '4 days',
+      dates: 'May 11 – May 15, 2025',
+      title: 'ISO Accrediation Training for Laboratory Personnel',
+      organizer: 'Agriculture Information and Training Center (AITC)',
+      image: 'images/training/5.avif',
+    },
+    {
+      year: '2025',
       tag: 'Fertilizer testing',
       month: 'Apr 2025',
       duration: '6 days',
       dates: 'Apr 27 – May 2, 2025',
       title: 'Authentic Fertilizer Analyst Training',
       organizer: 'Ministry of Agriculture and Livestock Development',
-      image: 'images/training/4.jpg',
+      image: 'images/training/4.avif',
     },
     {
       year: '2025',
@@ -22,7 +32,7 @@ export const training = {
       dates: 'Apr 21 – 25, 2025',
       title: 'Laboratory Training on Organic Manure Testing',
       organizer: 'Central Agricultural Laboratory',
-      image: 'images/training/1.jpg',
+      image: 'images/training/1.avif',
     },
     {
       year: '2023',
@@ -34,7 +44,7 @@ export const training = {
       organizer: 'Seed Quality Control Center (SQCC) and CIMMYT',
       place: 'Bhairahawa, Nepal',
       note: "In support of USAID's Nepal Seed and Fertilizer Project.",
-      image: 'images/training/2.jpg',
+      image: 'images/training/2.avif',
     },
     {
       year: '2022',
@@ -44,7 +54,7 @@ export const training = {
       dates: 'Nov 2 – 7, 2022',
       title: 'Training on Calibration / Documentation / Measurement Uncertainty',
       organizer: 'Central Agricultural Laboratory',
-      image: 'images/training/6.jpg',
+      image: 'images/training/6.avif',
     },
     {
       year: '2022',
@@ -55,7 +65,6 @@ export const training = {
       title: 'Supervision Training, National Census of Agriculture 2021/22',
       organizer: 'Central Bureau of Statistics',
       note: 'Preparatory supervision training for the 7th National Census of Agriculture.',
-      image: 'images/training/8.jpg',
     },
     {
       year: '2020',
@@ -65,7 +74,7 @@ export const training = {
       dates: 'May 10, 2020',
       title: 'Crop Pest Diagnosis (Course)',
       organizer: 'CABI Academy',
-      image: 'images/training/7.jpg',
+      image: 'images/training/19.avif',
     },
     {
       year: '2019',
@@ -77,7 +86,7 @@ export const training = {
       role: 'Speaker',
       organizer: 'Conference of Okayama International NGO Network (COINN)',
       place: 'Kurashiki, Japan',
-      image: 'images/training/9.jpg',
+      image: 'images/training/18.avif',
     },
     {
       year: '2018',
@@ -88,6 +97,7 @@ export const training = {
       title: 'Nepal Climate Convergence',
       organizer: 'Sustainable Development Institute',
       place: 'Kathmandu, Nepal',
+      image: 'images/training/16.avif',
     },
     {
       year: '2018',
@@ -98,7 +108,7 @@ export const training = {
       title: 'IPM Farmers Field School',
       organizer: 'Caritas Nepal',
       place: 'Rampur, Chitwan, Nepal',
-      image: 'images/training/11.jpg',
+      image: 'images/training/11.avif',
     },
     {
       year: '2016',
@@ -109,6 +119,7 @@ export const training = {
       title: 'Web and Technical Learning Boot Camp',
       organizer: 'United States Youth Council',
       place: 'Chitwan, Nepal',
+      image: 'images/training/17.avif',
     },
     {
       year: '2016',
@@ -119,7 +130,7 @@ export const training = {
       title: 'First Youth Agriculture Entrepreneurship Conference',
       organizer: '4H Nepal',
       place: 'Hariharbhawan, Lalitpur, Nepal',
-      image: 'images/training/10.jpg',
+      image: 'images/training/14.avif',
     },
   ],
 }
